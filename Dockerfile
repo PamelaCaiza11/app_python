@@ -5,7 +5,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copia el archivo de la aplicación dentro del contenedor
-COPY app.py /app
+COPY apppython.py /app
 
 # Instala las dependencias necesarias
 RUN pip install flask
