@@ -1,17 +1,18 @@
-# Usa una imagen base de Python
+# Use a base image of Python
 FROM python:3.9-slim
 
-# Establece el directorio de trabajo dentro del contenedor
+# Set the working directory inside the container
 WORKDIR /app
 
-# Copia el archivo de la aplicación dentro del contenedor
+# Copy the application file into the container
 COPY apppython.py /app
 
-# Instala las dependencias necesarias
+# Install necessary dependencies
 RUN pip install flask
 
-# Expone el puerto que la aplicación usará
+# Expose the port that the application will use
 EXPOSE 5000
 
-# Ejecuta el archivo de Python cuando se inicie el contenedor
+# Run the Python file when the container starts
 CMD ["python", "apppython.py"]
+
